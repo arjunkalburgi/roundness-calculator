@@ -5,6 +5,7 @@
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
+		"deploy": "gh-pages -d build --dotfiles",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch",
@@ -12,6 +13,7 @@
 		"format": "prettier --plugin-search-dir . --write ."
 	},
 	"devDependencies": {
+		"gh-pages": "^4.0.0",
 		"@sveltejs/adapter-auto": "^1.0.0",
 		"@sveltejs/kit": "^1.0.0",
 		"eslint": "^8.28.0",
