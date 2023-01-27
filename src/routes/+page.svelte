@@ -4,8 +4,7 @@
     let parentRadius = 64;
     let parentPadding = 40;
     $: childRadius = parentRadius - parentPadding;
-
-    let codeSample = `
+    $: codeSample = `
 .parent {
     border-radius: ${parentRadius}px;
     padding: ${parentPadding}px;
@@ -22,7 +21,7 @@
 		name="description"
 		content="Learn how to properly round the corners of boxes within boxes."
 	/>
-    <link href="https://raw.githubusercontent.com/PrismJS/prism-themes/master/themes/prism-duotone-earth.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-atom-dark.min.css" rel="stylesheet" />
 </svelte:head>
 
 <div class="container">
@@ -30,13 +29,11 @@
     <h1>How to calculate <br /><b>the roundness?<b></h1>
     <p>simply substract the side distance from the larger corner radius.</p>
     <div class="ex-sq" style="border-radius: {parentRadius}px; padding: {parentPadding}px;">
-        <div style="border-radius: {childRadius}px;">
-            <pre class="language-css">
-                <code>
-                    {@html Prism.highlight(codeSample, Prism.languages['css'], 'css')}
-                </code>
-            </pre>
-        </div>
+        <pre class="language-css"  style="border-radius: {childRadius}px;">
+            <code>
+                {@html Prism.highlight(codeSample, Prism.languages['css'], 'css')}
+            </code>
+        </pre>
     </div>
     <input type="number" bind:value={parentRadius} />
     <input type="number" bind:value={parentPadding} />
@@ -58,22 +55,20 @@
         height: 250px;
         width: 250px;
         display: flex;
+        margin: 40px 0;
         filter: drop-shadow(0 10px 0.75rem #cddde2);
         filter: drop-shadow(0 10px 0.75rem #e6f2fe); /* bg */
         filter: drop-shadow(0 10px 0.75rem #dbe2ea);
     }
 
-    .ex-sq div {
-        background: #47ca6c;
+    .ex-sq pre {
         width: 100%;
-    }
-
-    .ex-sq div pre {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100%;
         margin: 0;
         padding: 0;
+        font-size: 13px;
     }
 </style>
