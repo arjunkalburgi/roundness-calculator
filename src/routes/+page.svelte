@@ -1,3 +1,19 @@
+<script>
+	import { onMount } from 'svelte';
+
+    onMount(() => {
+		console.log("hi");
+	});
+</script>
+
+<svelte:head>
+	<title>Roundness Calculator</title>
+	<meta
+		name="description"
+		content="Learn how to properly round the corners of boxes within boxes."
+	/>
+</svelte:head>
+
 <div class="container">
     <div class="content">
         <span>💎 Tips and tricks</span>
@@ -28,8 +44,8 @@
         background: white;
         border-radius: 64px;
         padding: 40px;
-        height: 300px;
-        width: 300px;
+        height: 250px;
+        width: 250px;
         display: flex;
         filter: drop-shadow(0 10px 0.75rem #cddde2);
         filter: drop-shadow(0 10px 0.75rem #e6f2fe); /* bg */
