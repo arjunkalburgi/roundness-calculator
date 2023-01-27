@@ -5,20 +5,21 @@
 		<link rel="icon" href="./favicon.jpeg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta http-equiv="content-security-policy" content="">
-		<link href="./_app/immutable/assets/_page-183145b9.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/start-ff57c466.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/index-9ab7548f.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-c1ad6b71.js">
-		<link rel="modulepreload" href="./_app/immutable/components/layout.svelte-11c30ada.js">
+		<link href="./_app/immutable/assets/_page-9dbf417b.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/start-6c664396.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index-0891909f.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-9157e182.js">
+		<link rel="modulepreload" href="./_app/immutable/components/layout.svelte-57ca9a59.js">
 		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.js-9cbb603b.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-da46b06b.js">
-		<link rel="modulepreload" href="./_app/immutable/components/pages/_page.svelte-fed5934c.js"><title>Roundness Calculator</title><!-- HEAD_svelte-157u7c6_START --><meta name="description" content="Learn how to properly round the corners of boxes within boxes."><link href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-atom-dark.min.css" rel="stylesheet"><!-- HEAD_svelte-157u7c6_END -->
+		<link rel="modulepreload" href="./_app/immutable/components/pages/_page.svelte-7ab0817b.js"><title>Roundness Calculator</title><!-- HEAD_svelte-157u7c6_START --><meta name="description" content="Learn how to properly round the corners of boxes within boxes."><link href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-atom-dark.min.css" rel="stylesheet"><!-- HEAD_svelte-157u7c6_END -->
 		<style>
 			body {
 				background: linear-gradient(white, #e6f2fe);
 				height: 100vh;
 				margin: 0;
 				overflow: hidden;
+				font-family: sans-serif;
 			}
 
 			div.body-content { 
@@ -35,36 +36,40 @@
 
 
 
-<div class="container svelte-cly41y"><span>💎 Tips and tricks</span>
-    <h1>How to calculate <br><b>the roundness?<b></b></b></h1>
-    <p>simply substract the side distance from the larger corner radius.</p>
-    <div class="ex-sq svelte-cly41y" style="border-radius: 64px; padding: 40px;"><pre class="language-css svelte-cly41y" style="border-radius: 24px;">            <code>
-<span class="token selector">.parent</span> <span class="token punctuation">{</span>
+<div class="container svelte-1cka43p"><span class="tt svelte-1cka43p">💎 Tips and tricks</span>
+    <h1 class="svelte-1cka43p">How to calculate <br><b>the roundness?<b></b></b></h1>
+    <p class="desc svelte-1cka43p">When you have rounded boxes inside each other, the flow between them will be unnatural unless the roundness is perfect. simply substract the side distance from the larger corner radius.</p>
+    <div class="ex-sq svelte-1cka43p" style="border-radius: 64px; padding: 40px;"><pre class="language-css svelte-1cka43p" style="border-radius: 24px;">            <code>
+<span class="token selector">.outer</span> <span class="token punctuation">{</span>
     <span class="token property">border-radius</span><span class="token punctuation">:</span> 64px<span class="token punctuation">;</span>
     <span class="token property">padding</span><span class="token punctuation">:</span> 40px<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
     
-<span class="token selector">.child</span> <span class="token punctuation">{</span>
+<span class="token selector">.inner</span> <span class="token punctuation">{</span>
     <span class="token property">border-radius</span><span class="token punctuation">:</span> 24px<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
             </code>
         </pre></div>
-    <input type="number" value="64">
-    <input type="number" value="40">
-    <input type="number" value="24">
+    <div class="parent-controls svelte-1cka43p"><label class="svelte-1cka43p"><span>outer radius</span>
+            <input type="number" class="svelte-1cka43p" value="64"></label>
+        <label class="svelte-1cka43p"><span>outer padding</span>
+            <input type="number" class="svelte-1cka43p" value="40"></label></div>
+    <label class="svelte-1cka43p"><span>inner radius</span>
+        <input type="number" class="svelte-1cka43p" value="24"></label>
 
-    
+    <p class="credits svelte-1cka43p">Thanks to Michal Malewicz for the inspiration behind this little site! View his whole thread below.</p>
+    <blockquote class="twitter-tweet"><p lang="en" dir="ltr">🔥 It&#39;s one of those little things that I find extremely annoying in UI.<br>Learn how to properly round the corners of boxes within boxes.<br><br>A thread 👇 <a href="https://t.co/3MjBxGZG0q">pic.twitter.com/3MjBxGZG0q</a></p>— Michal Malewicz (@michalmalewicz) <a href="https://twitter.com/michalmalewicz/status/1587038731629797376?ref_src=twsrc%5Etfw">October 31, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 </div>
 
 
-		<script type="module" data-sveltekit-hydrate="bzayql">
-			import { start } from "./_app/immutable/start-ff57c466.js";
+		<script type="module" data-sveltekit-hydrate="199iv1p">
+			import { start } from "./_app/immutable/start-6c664396.js";
 
 			start({
 				env: {},
 				paths: {"assets":"","base":""},
-				target: document.querySelector('[data-sveltekit-hydrate="bzayql"]').parentNode,
-				version: "1674851106641",
+				target: document.querySelector('[data-sveltekit-hydrate="199iv1p"]').parentNode,
+				version: "1674853471589",
 				hydrate: {
 					node_ids: [0, 2],
 					data: [null,null],
