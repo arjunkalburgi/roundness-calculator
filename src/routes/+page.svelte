@@ -1,18 +1,7 @@
 <script>
-    import Prism from 'prismjs';
-
     let parentRadius = 64;
     let parentPadding = 40;
     $: childRadius = parentRadius - parentPadding;
-    $: codeSample = `
-.parent {
-    border-radius: ${parentRadius}px;
-    padding: ${parentPadding}px;
-}
-    
-.child {
-    border-radius: ${parentRadius - parentPadding}px;
-}`;
 </script>
 
 <svelte:head>
@@ -31,7 +20,14 @@
     <div class="ex-sq" style="border-radius: {parentRadius}px; padding: {parentPadding}px;">
         <pre class="language-css"  style="border-radius: {childRadius}px;">
             <code>
-                {@html Prism.highlight(codeSample, Prism.languages['css'], 'css')}
+<span class="token selector">.parent</span> <span class="token punctuation">{`{`}</span>
+    <span class="token property">border-radius</span><span class="token punctuation">:</span> {parentRadius}px<span class="token punctuation">;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> {parentPadding}px<span class="token punctuation">;</span>
+<span class="token punctuation">{'}'}</span>
+    
+<span class="token selector">.child</span> <span class="token punctuation">{'{'}</span>
+    <span class="token property">border-radius</span><span class="token punctuation">:</span> {childRadius}px<span class="token punctuation">;</span>
+<span class="token punctuation">{'}'}</span>
             </code>
         </pre>
     </div>
