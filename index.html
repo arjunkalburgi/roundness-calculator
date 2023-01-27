@@ -2,17 +2,17 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" href="/roundness-calculator/favicon.jpeg" />
+		<link rel="icon" href="./favicon.jpeg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta http-equiv="content-security-policy" content="">
-		<link href="/roundness-calculator/_app/immutable/assets/_page-a55f2a3b.css" rel="stylesheet">
-		<link rel="modulepreload" href="/roundness-calculator/_app/immutable/start-a4e96fa1.js">
-		<link rel="modulepreload" href="/roundness-calculator/_app/immutable/chunks/index-97c4cb29.js">
-		<link rel="modulepreload" href="/roundness-calculator/_app/immutable/chunks/singletons-23d89355.js">
-		<link rel="modulepreload" href="/roundness-calculator/_app/immutable/components/layout.svelte-129db079.js">
-		<link rel="modulepreload" href="/roundness-calculator/_app/immutable/modules/pages/_layout.js-9cbb603b.js">
-		<link rel="modulepreload" href="/roundness-calculator/_app/immutable/chunks/_layout-da46b06b.js">
-		<link rel="modulepreload" href="/roundness-calculator/_app/immutable/components/pages/_page.svelte-618bd0e2.js"><title>Roundness Calculator</title><!-- HEAD_svelte-17zzlbw_START --><meta name="description" content="Learn how to properly round the corners of boxes within boxes."><!-- HEAD_svelte-17zzlbw_END -->
+		<link href="./_app/immutable/assets/_page-1eb0db7f.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/start-9d7102d2.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index-46c81276.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-78238661.js">
+		<link rel="modulepreload" href="./_app/immutable/components/layout.svelte-c2d004c6.js">
+		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.js-9cbb603b.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-da46b06b.js">
+		<link rel="modulepreload" href="./_app/immutable/components/pages/_page.svelte-7cfd1087.js"><title>Roundness Calculator</title><!-- HEAD_svelte-1kka24v_START --><meta name="description" content="Learn how to properly round the corners of boxes within boxes."><link href="https://raw.githubusercontent.com/PrismJS/prism-themes/master/themes/prism-duotone-earth.css" rel="stylesheet"><!-- HEAD_svelte-1kka24v_END -->
 		<style>
 			body {
 				background: linear-gradient(white, #e6f2fe);
@@ -35,22 +35,37 @@
 
 
 
-<div class="container svelte-1j19nlz"><div class="content svelte-1j19nlz"><span>💎 Tips and tricks</span>
-        <h1>How to calculate <br><b>the roundness?<b></b></b></h1>
-        <div class="ex-sq svelte-1j19nlz"><div class="svelte-1j19nlz"><p>Parent radius: 64px</p>
-                <p>Padding between: 40px</p>
-                <p>Child radius: 64px - 40px = 24px</p></div></div></div>
+<div class="container svelte-5lt7vr"><span>💎 Tips and tricks</span>
+    <h1>How to calculate <br><b>the roundness?<b></b></b></h1>
+    <p>simply substract the side distance from the larger corner radius.</p>
+    <div class="ex-sq svelte-5lt7vr" style="border-radius: 64px; padding: 40px;"><div style="border-radius: 24px;" class="svelte-5lt7vr"><pre class="language-css svelte-5lt7vr">                <code>
+                    <!-- HTML_TAG_START -->
+<span class="token selector">.parent</span> <span class="token punctuation">{</span>
+    <span class="token property">border-radius</span><span class="token punctuation">:</span> 64px<span class="token punctuation">;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> 40px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+    
+<span class="token selector">.child</span> <span class="token punctuation">{</span>
+    <span class="token property">border-radius</span><span class="token punctuation">:</span> 24px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><!-- HTML_TAG_END -->
+                </code>
+            </pre></div></div>
+    <input type="number" value="64">
+    <input type="number" value="40">
+    <input type="number" value="24">
+
+    
 </div>
 
 
-		<script type="module" data-sveltekit-hydrate="cbq0zj">
-			import { start } from "/roundness-calculator/_app/immutable/start-a4e96fa1.js";
+		<script type="module" data-sveltekit-hydrate="h61x9a">
+			import { start } from "./_app/immutable/start-9d7102d2.js";
 
 			start({
 				env: {},
-				paths: {"assets":"/roundness-calculator","base":"/roundness-calculator"},
-				target: document.querySelector('[data-sveltekit-hydrate="cbq0zj"]').parentNode,
-				version: "1674840570024",
+				paths: {"assets":"","base":""},
+				target: document.querySelector('[data-sveltekit-hydrate="h61x9a"]').parentNode,
+				version: "1674847166394",
 				hydrate: {
 					node_ids: [0, 2],
 					data: [null,null],
