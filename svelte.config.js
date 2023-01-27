@@ -13,7 +13,8 @@ const config = {
 			precompress: false
 		}),
 		paths: {
-			base: '/roundness-calculator',
+			base: '',
+			// base: '/roundness-calculator',
 		},
 
 	}
